@@ -13,10 +13,23 @@ npm install trim-uri --save
 
 ## Example
 
-``js
+```js
 var trimUri = require('trim-uri');
 
 trimUri('http://super.long.annoying.hostname.com/foo/bar/baz/a/b/c/d/e.html', 50)
+// => 'http://…annoying.hostname.com/foo/bar/baz/a/b/c/d…'
+
+trimUri('data:text/plain;charset=US-ASCII;base64,SGVsbG8sIFdvcmxkIQ%3D%3D
+// => 'data:text/plain,charset=US-ASCII;base64'
+```
+
+## Stability notice
+
+This is version 0.1.0. Paths are not truncated intelligently yet (i.e. preserving
+the first and last components). This will be done before 1.0.0. The API itself
+will not change.
+
+Unit tests need more coverage, particularly for invalid inputs.
 
 ## Usage
 
@@ -34,6 +47,8 @@ The order of priority for trimming is as follows:
 
 Data URIs are handled specially (the content part is removed). Other URIs simply
 have their rightmost part trimmed off.
+
+Elision won't occur if the separator is larger or equal to the content being elided.
 
 ## License
 
