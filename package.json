@@ -1,0 +1,41 @@
+{
+  "name": "trim-uri",
+  "version": "0.1.0",
+  "description": "Truncate long URI/URLs for nicer logging or reporting",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardjharris/trim-uri.git"
+  },
+  "keywords": [
+    "crop",
+    "cut",
+    "truncate",
+    "shorten",
+    "trim",
+    "uri",
+    "url"
+  ],
+  "author": "Richard Harris <richardjharris@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardjharris/trim-uri/issues"
+  },
+  "homepage": "https://github.com/richardjharris/trim-uri#readme",
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "printable-characters": "^1.0.38",
+    "psl": "^1.1.20",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  },
+  "jshintConfig": { "esversion": 6 }
+}
