@@ -19,7 +19,7 @@ var trimUri = require('trim-uri');
 trimUri('http://super.long.annoying.hostname.com/foo/bar/baz/a/b/c/d/e.html', 50)
 // => 'http://…annoying.hostname.com/foo/bar/baz/a/b/c/d…'
 
-trimUri('data:text/plain;charset=US-ASCII;base64,SGVsbG8sIFdvcmxkIQ%3D%3D
+trimUri('data:text/plain;charset=US-ASCII;base64,SGVsbG8sIFdvcmxkIQ%3D%3D', 50)
 // => 'data:text/plain,charset=US-ASCII;base64'
 ```
 
